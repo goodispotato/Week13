@@ -1,5 +1,6 @@
 package com.example.secondproject.repository;
 
+import com.example.secondproject.entity.Article;
 import com.example.secondproject.entity.Comment;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -31,7 +32,8 @@ class CommentRepositoryTest {
             Comment c=new Comment(3L,article,"Choi","쇼생크 탈출");
             List<Comment> expected= Arrays.asList(a,b,c);
             //4. 비교 및 검증
-            assertEquals(expected,toString(),comments.toString(),"4번 글의 모든 댓글 출력");
+            //assertEquals(expected,toString(),comments.toString(),"4번 글의 모든 댓글 출력");
+            assertEquals(expected.toString(),comments.toString(),"4번 글의 모든 댓글 출력");
         }
     }
 
